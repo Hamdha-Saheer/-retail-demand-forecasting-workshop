@@ -1,5 +1,7 @@
 import pandas as pd
 from src.config.config import DATA_RAW_PATH
+
+#data preprocessing function
 def preprocess_run():
     # Load raw sales data
     df = pd.read_csv(DATA_RAW_PATH)
