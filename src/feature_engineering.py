@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 import joblib, os
 def add_features(df):
     df['day_of_week'] = df['date'].dt.dayofweek
+    # In src/feature_engineering.py, make the weekend logic more explicit:
     weekend_days = [5, 6]  # 5=Saturday, 6=Sunday
     df['is_weekend'] = df['day_of_week'].isin(weekend_days).astype(int)
     return df
